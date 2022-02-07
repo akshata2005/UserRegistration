@@ -13,6 +13,7 @@ namespace UserRegistration
             RegexValidation.FirstName();
             RegexValidation.LastName();
             RegexValidation.Email();
+            RegexValidation.MobileNumber();
         }
     }
 }
