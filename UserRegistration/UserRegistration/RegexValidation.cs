@@ -9,10 +9,54 @@ namespace UserRegistration
 {
     public class RegexValidation
     {
-        public const string Regex_FirstName = "^[A-Z]{1}[A-Za-z]{2,}$";//Create pattren for firstname
-        public bool ValidateFirstName(string FirstName)//consructor
+        public static void FirstName()
         {
-            return Regex.IsMatch(FirstName, Regex_FirstName);
+            string regex = "[A-Z]{1}[a-z]{3,10}$";
+            Console.WriteLine("Enter first name");
+            string fName = Console.ReadLine();
+            Regex rg = new Regex(regex);
+            bool result = rg.IsMatch(fName);
+            if (result == true)
+            {
+                Console.WriteLine("valid");
+            }
+            else
+            {
+                Console.WriteLine("invalid");
+            }
+        }
+        //method to validate last name
+        public static void LastName()
+        {
+            string regex = "[A-Z]{1}[a-z]{3,10}$";
+            Console.WriteLine("Enter Last name");
+            string fName = Console.ReadLine();
+            Regex rg = new Regex(regex);
+            bool result = rg.IsMatch(fName);
+            if (result == true)
+            {
+                Console.WriteLine("valid");
+            }
+            else
+            {
+                Console.WriteLine("invalid");
+            }
+        }
+        public static void Email()
+        {
+            string regex = "[a-zA-Z0-9_.]+@[a-zA-Z.]+$";
+            Console.WriteLine("Enter EmailId");
+            string fName = Console.ReadLine();
+            Regex rg = new Regex(regex);
+            bool result = rg.IsMatch(fName);
+            if (result == true)
+            {
+                Console.WriteLine("valid");
+            }
+            else
+            {
+                Console.WriteLine("invalid");
+            }
         }
     }
 }
