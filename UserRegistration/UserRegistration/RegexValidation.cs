@@ -44,7 +44,8 @@ namespace UserRegistration
         }
         public static void Email()
         {
-            string regex = "[a-zA-Z0-9_.]+@[a-zA-Z.]+$";
+            //string regex = "[a-zA-Z0-9_.]+@[a-zA-Z.]+$";
+            string regex = "^[a-zA-Z0-9]+([.][a-zA-Z0-9]+)?@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})?$";
             Console.WriteLine("Enter EmailId");
             string fName = Console.ReadLine();
             Regex rg = new Regex(regex);
