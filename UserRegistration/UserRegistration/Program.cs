@@ -14,6 +14,7 @@ namespace UserRegistration
             RegexValidation.LastName();
             RegexValidation.Email();
             RegexValidation.MobileNumber();
+            RegexValidation.Password();
         }
     }
 }
